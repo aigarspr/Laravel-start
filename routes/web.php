@@ -9,3 +9,10 @@ Route::get('/', function () {
 Route::get('/contact', function() {
     return view('contact');
 });
+
+Route::get('/weather/{city}', function(string $city){
+
+    $temp = rand(-20, 35);
+
+    return view('weather', ['city' => $city, 'temp' => $temp]);
+});
