@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ItemController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -16,3 +17,8 @@ Route::get('/weather/{city}', function(string $city){
 
     return view('weather', ['city' => $city, 'temp' => $temp]);
 });
+
+Route::get('/items', [ItemController::class, 'items']
+
+    
+);
